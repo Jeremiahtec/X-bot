@@ -7,7 +7,7 @@ async function run() {
 
     // 1. GENERATE CAPTION WITH GEMINI
     console.log("Generating caption with Gemini...");
-    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${geminiKey}`;
+    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.6-flash:generateContent?key=${geminiKey}`;
     const prompt = "Write a short, engaging tweet (under 200 characters) about automotive tech or vehicle engineering. Include 2 relevant hashtags. Do not include quotes or emojis.";
 
     const aiRes = await fetch(geminiUrl, {
