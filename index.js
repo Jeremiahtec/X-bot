@@ -33,6 +33,11 @@ async function run() {
     const imageUrl = unsplashData.urls.regular;
 
     // 3. UPLOAD MEDIA & TWEET VIA X API
+    console.log("Checking environment variables...");
+    console.log("API Key length:", process.env.TWITTER_API_KEY ? process.env.TWITTER_API_KEY.length : "UNDEFINED");
+    console.log("API Secret length:", process.env.TWITTER_API_SECRET ? process.env.TWITTER_API_SECRET.length : "UNDEFINED");
+    console.log("Access Token length:", process.env.TWITTER_ACCESS_TOKEN ? process.env.TWITTER_ACCESS_TOKEN.length : "UNDEFINED");
+    console.log("Access Secret length:", process.env.TWITTER_ACCESS_SECRET ? process.env.TWITTER_ACCESS_SECRET.length : "UNDEFINED");
     console.log("Initializing Twitter client...");
     const twitterClient = new TwitterApi({
       appKey: process.env.TWITTER_API_KEY,
